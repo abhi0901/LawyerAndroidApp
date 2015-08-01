@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Screen2_2" >
+
+    <EditText
+        android:id="@+id/updatename"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="35dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:hint="@string/clientname"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/updateemail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/updatename"
+        android:layout_below="@+id/updatename"
+        android:layout_marginTop="43dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:hint="@string/phone"
+        android:inputType="textEmailAddress"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/updatephone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/updateemail"
+        android:layout_below="@+id/updateemail"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="phone"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/addnewhearings"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/updatephone"
+        android:layout_below="@+id/updatephone"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="updateContact"
+        android:text="@string/save"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/gobacktomainmenu"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/addnewhearings"
+        android:layout_alignBottom="@+id/addnewhearings"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="deleteContact"
+        android:text="@string/delete"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/previousbutton"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/gobacktomainmenu"
+        android:layout_alignBottom="@+id/gobacktomainmenu"
+        android:layout_alignRight="@+id/updatephone"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="cancelgoBacktoScreen2_1"
+        android:text="@string/cancel"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

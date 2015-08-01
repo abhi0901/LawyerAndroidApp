@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Screen1" >
+
+    <Button
+        android:id="@+id/manageclientbutton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="55dp"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="gotoScreen2_1"
+        android:text="@string/manageclients"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/managehearingbutton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/manageclientbutton"
+        android:layout_below="@+id/manageclientbutton"
+        android:layout_marginTop="34dp"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="gotoScreen3"
+        android:text="@string/managehearings"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/accountsettingbutton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/managehearingbutton"
+        android:layout_below="@+id/managehearingbutton"
+        android:layout_marginTop="34dp"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="gotoScreen5"
+        android:text="@string/accountsettings"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

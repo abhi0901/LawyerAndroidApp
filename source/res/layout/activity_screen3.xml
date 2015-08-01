@@ -1,0 +1,176 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:onClick="moveToLastDate"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Screen3" >
+
+    <Button
+        android:id="@+id/firstbutton"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/lastbutton"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="moveToLatestDate"
+        android:text="@string/first"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/lastbutton"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/addnewhearings"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="moveToLastDate"
+        android:text="@string/last"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/previousbutton"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="19dp"
+        android:layout_toRightOf="@+id/lastbutton"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="moveToPrevDate"
+        android:text="@string/previous"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/gobacktomainmenu"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/firstbutton"
+        android:layout_alignRight="@+id/firstbutton"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="goBacktoMainMenu"
+        android:text="@string/cancel"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/addnewhearings"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/gobacktomainmenu"
+        android:layout_alignBottom="@+id/gobacktomainmenu"
+        android:layout_alignParentLeft="true"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="gotoScreen4"
+        android:text="@string/add"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/nextbutton"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/firstbutton"
+        android:layout_alignBottom="@+id/firstbutton"
+        android:layout_marginRight="14dp"
+        android:layout_toLeftOf="@+id/firstbutton"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="moveToNextDate"
+        android:text="@string/next"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/datetext"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/addnewhearings"
+        android:layout_alignLeft="@+id/addnewhearings"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/holo_red_dark"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/casedetailtext"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/datetext"
+        android:layout_alignLeft="@+id/datetext"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/holo_red_dark"
+        android:lines="10"
+        android:maxLines="10"
+        android:scrollbars="vertical"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/casenotext"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/casedetailtext"
+        android:layout_alignLeft="@+id/casedetailtext"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/holo_red_dark"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="20sp" />
+
+    <ListView
+        android:id="@+id/mylist2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/casenotext"
+        android:layout_alignLeft="@+id/lastbutton"
+        android:layout_alignParentTop="true" >
+
+    </ListView>
+
+    <Button
+        android:id="@+id/updatehearing"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/datetext"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="gotoScreen4_1"
+        android:text="@string/edit"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/hearingidtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/clientidtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>

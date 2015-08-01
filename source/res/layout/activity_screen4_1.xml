@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Screen4_1" >
+
+    <TextView
+        android:id="@+id/clientnametext"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/updatecasedate"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/updatecasedetails"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="95dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:hint="@string/nexthearingdate"
+        android:inputType="date"
+        android:textColor="@android:color/black"
+        android:textColorLink="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/updatehearing"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/updatecasedate"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="updateHearing"
+        android:text="@string/save"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/deletehearing"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/updatehearing"
+        android:layout_alignBottom="@+id/updatehearing"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="deleteHearing"
+        android:text="@string/delete"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/cancelbutton2"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/deletehearing"
+        android:layout_alignRight="@+id/clientnametext"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="cancelGoBackScreen3"
+        android:text="@string/cancel"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/updatecasedetails"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_above="@+id/updatecasedate"
+        android:layout_alignLeft="@+id/updatecaseno"
+        android:layout_marginBottom="14dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:hint="@string/casedetails"
+        android:inputType="textMultiLine"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/updatecaseno"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_above="@+id/updatecasedetails"
+        android:layout_alignLeft="@+id/clientnametext"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:hint="@string/caseno"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
